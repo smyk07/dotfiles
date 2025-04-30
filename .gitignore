@@ -11,6 +11,7 @@ session/
 systemd/
 xdg-desktop-portal/
 yay/
+obs_studio/
 
 QtProject.conf
 dolphinrc
