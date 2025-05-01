@@ -6,12 +6,13 @@ htop/
 kde.org/
 obsidian/
 pulse/
-rofi/
 session/
 systemd/
 xdg-desktop-portal/
 yay/
 obs_studio/
+audacity/
+qBittorrent/
 
 QtProject.conf
 dolphinrc

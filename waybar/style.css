@@ -1,0 +1,51 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono NF Light";
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+#workspaces button {
+  padding: 0 3px;
+  margin: 0 3px;
+  color: white;
+  border-bottom: 3px solid #3a3b3c;
+}
+
+#workspaces button.active {
+  border-bottom: 3px solid #89b4fb;
+}
+
+#clock,
+#battery {
+  padding: 0 6px;
+  margin: 0 5px;
+  background-color: transparent;
+  color: white;
+}
+
+#battery.charging {
+  color: white;
+}
+
+@keyframes blink {
+  to {
+    background-color: rgba(1, 1, 1, 0);
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
