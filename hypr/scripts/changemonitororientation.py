@@ -6,7 +6,6 @@ import shutil
 configs = {
     "dualh": "horizontal.conf",
     "dualv": "vertical.conf",
-    "single": "single.conf",
 }
 
 shutil.copy(
