@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+# Check if directory is provided
+if [[ -z "$1" ]]; then
+  echo "Usage: ns <directory>"
+  return 1
+fi
+
+# Resolve absolute path
+target_dir=$(realpath "$1")
+
+# Check if it's a directory
+if [[ ! -d "$target_dir" ]]; then
+  echo "Error: '$target_dir' is not a valid directory."
+  return 1
+fi
+
+# Use directory name as session name (replace slashes with dashes)
+session_name=$(basename "$target_dir")
+
+
+if [[ -z $TMUX ]]; then
+  # If session exists, attach to it
+  if tmux has-session -t="$session_name" 2>/dev/null; then
+    tmux attach-session -t="$session_name"
+  else
+    # Create a new session starting in the target directory
+    tmux new-session -s "$session_name" -c "$target_dir"
+  fi
+else 
+  # Switch to an existing session or create a new one
+  if ! tmux has-session -t=$session_name 2>/dev/null; then
+    command tmux new-session -A -ds $session_name -c "$target_dir"
+  fi
+  command tmux switch-client -t $session_name
+fi
+
+exit 0

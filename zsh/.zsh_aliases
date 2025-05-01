@@ -1,3 +1,6 @@
+# alias for ns
+alias ns="~/.config/zsh/scripts/new-tmux-session"
+
 # alias for cd .. 
 alias ..="cd .."
 
