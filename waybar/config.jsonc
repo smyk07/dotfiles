@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "load", "battery"],
+  "modules-right": ["network", "battery"],
 
   "sway/window": {
     "max-length": 50,
@@ -20,15 +20,9 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "{essid}",
-    "format-ethernet": "{ipaddr}",
+    "format-wifi": "{essid} -",
+    "format-ethernet": "{ipaddr} -",
     "format-disconnected": "", //An empty format will hide the module.
-    "max-length": 50,
-  },
-
-  "load": {
-    "interval": 10,
-    "format": " - {load1} -",
-    "max-length": 10,
+    "max-length": 75,
   },
 }
