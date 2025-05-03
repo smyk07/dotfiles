@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "battery"],
+  "modules-right": ["power-profiles-daemon", "network", "battery"],
 
   "sway/window": {
     "max-length": 50,
@@ -20,9 +20,21 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "{essid} -",
-    "format-ethernet": "{ipaddr} -",
+    "format-wifi": " {essid} -",
+    "format-ethernet": " {ipaddr} -",
     "format-disconnected": "", //An empty format will hide the module.
     "max-length": 75,
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}  -",
+    "tooltip-format": "Power profile: {profile}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": "",
+    },
   },
 }
