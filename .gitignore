@@ -10,7 +10,7 @@ session/
 systemd/
 xdg-desktop-portal/
 yay/
-obs_studio/
+obs-studio/
 audacity/
 qBittorrent/
 bpytop/
@@ -19,3 +19,4 @@ QtProject.conf
 dolphinrc
 kiorc
 mimeapps.list
+baloofileinformationrc
