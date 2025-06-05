@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["power-profiles-daemon", "network", "battery"],
+  "modules-right": ["power-profiles-daemon", "load", "network", "battery"],
 
   "sway/window": {
     "max-length": 50,
@@ -11,6 +11,7 @@
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
+    "tooltip": true,
   },
 
   "clock": {
@@ -36,5 +37,11 @@
       "balanced": "",
       "power-saver": "",
     },
+  },
+
+  "load": {
+    "interval": 10,
+    "format": " {load1} -",
+    "max-length": 10,
   },
 }

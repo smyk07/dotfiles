@@ -1,14 +1,18 @@
-# tmux-sessionizer
 zle_tmux_sessionizer() {
   ~/.config/zsh/scripts/tmux-sessionizer
 }
 zle -N tmux_sessionizer_widget zle_tmux_sessionizer
-bindkey '^[f' tmux_sessionizer_widget
 
-# moving cursor 
+function paste_from_clipboard() {
+  LBUFFER+=$(wl-paste)
+}
+zle -N paste_from_clipboard
+
 bindkey '^h' backward-word
 bindkey '^l' forward-word
-
-# history 
 bindkey '^k' up-line-or-search
 bindkey '^j' down-line-or-search
+
+bindkey '^p' paste_from_clipboard
+
+bindkey '^[f' tmux_sessionizer_widget

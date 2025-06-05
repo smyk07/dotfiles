@@ -14,9 +14,12 @@ obs-studio/
 audacity/
 qBittorrent/
 bpytop/
+menus/
 
 QtProject.conf
 dolphinrc
 kiorc
 mimeapps.list
 baloofileinformationrc
+user-dirs.dirs
+user-dirs.locale
