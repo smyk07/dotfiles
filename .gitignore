@@ -15,6 +15,13 @@ audacity/
 qBittorrent/
 bpytop/
 menus/
+chromium/
+lazygit/
+libvirt/
+gnome-boxes/
+asm-lsp/
+glib-2.0/
+procps/
 
 QtProject.conf
 dolphinrc
