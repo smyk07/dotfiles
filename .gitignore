@@ -2,6 +2,7 @@ dconf/
 go/
 Vencord/
 gtk-3.0/
+gtk-4.0/
 htop/
 kde.org/
 obsidian/
@@ -26,6 +27,12 @@ doom/
 emacs/
 nextjs-nodejs/
 hut/
+streamrip/
+mpd/
+glow/
+cava/
+Proton/
+GIMP/
 
 QtProject.conf
 dolphinrc
@@ -35,3 +42,7 @@ baloofileinformationrc
 user-dirs.dirs
 user-dirs.locale
 filetypesrc
+katevirc
+kdeglobals
+kile-livepreview-okularpartrc
+kilerc
