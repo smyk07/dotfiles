@@ -67,3 +67,6 @@ fi
 
 # run nf on startup
 neofetch
+
+# setup zoxide
+eval "$(zoxide init zsh)"

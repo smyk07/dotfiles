@@ -8,18 +8,15 @@ function paste_from_clipboard() {
 }
 zle -N paste_from_clipboard
 
+bindkey '^p' paste_from_clipboard
+
 zle_tmux_sessionizer() {
   ~/.config/zsh/scripts/tmux-sessionizer
 }
 zle -N tmux_sessionizer_widget zle_tmux_sessionizer
 
-org() {
-  tmux splitw -h -c ~/orgfiles "nvim"
-}
 zle -N org
-
-bindkey '^p' paste_from_clipboard
 
 bindkey '^[f' tmux_sessionizer_widget
 
-bindkey '^[o' org
+bindkey '^[o' org_widget
