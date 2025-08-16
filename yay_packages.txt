@@ -1,0 +1,10 @@
+alpine
+evremap-git
+moodyrain-git
+neofetch
+nmh-git
+osu
+pomodorot-bin
+streamrip
+yay
+yay-debug

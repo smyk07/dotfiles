@@ -1,0 +1,38 @@
+#!/bin/sh
+set -eu
+
+PACMAN_LIST="pacman_packages.txt"
+AUR_LIST="yay_packages.txt"
+
+pacman -Qqe >"$PACMAN_LIST"
+
+if command -v yay >/dev/null 2>&1; then
+  pacman -Qqem >"$AUR_LIST" || {
+    yay -Qqe >"$AUR_LIST"
+  }
+  HAVE_YAY=1
+else
+  pacman -Qqm >"$AUR_LIST"
+  HAVE_YAY=0
+fi
+
+count_file() {
+  [ -s "$1" ] && awk 'END{print NR}' "$1" || printf "0"
+}
+
+PAC_COUNT="$(count_file "$PACMAN_LIST")"
+AUR_COUNT="$(count_file "$AUR_LIST")"
+
+echo "Packages extracted successfully."
+echo "pacman explicit packages: $PAC_COUNT ($PACMAN_LIST)"
+if [ "$HAVE_YAY" -eq 1 ]; then
+  echo "AUR explicit packages:    $AUR_COUNT ($AUR_LIST)"
+else
+  echo "Foreign packages (no yay): $AUR_COUNT ($AUR_LIST)"
+fi
+
+# Restore examples:
+# - Repo packages:   sudo pacman -S --needed - < pacman_packages.txt
+# - AUR/foreign:
+#   * If yay installed: yay -S --needed - < yay_packages.txt
+#   * Without yay:      manually rebuild AUR packages listed in yay_packages.txt
