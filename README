@@ -1,0 +1,4 @@
+My Arch Dotfiles - has everything I need
+
+- Extract packages on main system: ./extract_packages
+- Restore / install extracted packages on another system: ./restore_packages
