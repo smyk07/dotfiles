@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PACMAN_LIST="pacman_packages.txt"
+AUR_LIST="yay_packages.txt"
+
+sudo pacman -S --needed - < $PACMAN_LIST
+
+yay -S --needed - < $AUR_LIST
