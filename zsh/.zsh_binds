@@ -14,7 +14,7 @@ zle_tmux_sessionizer() {
 zle -N tmux_sessionizer_widget zle_tmux_sessionizer
 
 org() {
-  tmux splitw -h -l 90 -c ~/orgfiles "tmux splitw -v -l 15 && nvim"
+  tmux splitw -h -l 90 -c ~/orgfiles "nvim"
 }
 zle -N org
 

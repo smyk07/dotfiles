@@ -33,6 +33,8 @@ glow/
 cava/
 Proton/
 GIMP/
+unity3d/
+vlc/
 
 QtProject.conf
 dolphinrc
@@ -46,3 +48,4 @@ katevirc
 kdeglobals
 kile-livepreview-okularpartrc
 kilerc
+elisarc

@@ -1,9 +1,9 @@
 acpid
-alpine
 amd-ucode
 arch-wiki-docs
 archlinux-xdg-menu
 audacity
+audiofile
 base
 base-devel
 bc
@@ -19,6 +19,7 @@ clang
 cmatrix
 cowsay
 cpio
+cpr
 cscope
 ctags
 dkms
@@ -27,9 +28,11 @@ dolphin
 dunst
 dysk
 efibootmgr
+elisa
 emacs
 evremap-git
 fasm
+fasmg
 firefox
 flatpak
 flatpak-xdg-utils
@@ -89,6 +92,7 @@ nsxiv
 nvidia-dkms
 obs-studio
 obsidian
+opencv
 openssh
 osu
 otf-aurulent-nerd
@@ -121,6 +125,7 @@ rsync
 rust-analyzer
 rustup
 s-nail
+sdl_image
 slurp
 smartmontools
 sof-firmware
@@ -206,10 +211,12 @@ ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
 ttf-victor-mono-nerd
 ttf-zed-mono-nerd
+typst
 umu-launcher
 unzip
 valgrind
 vim
+vlc
 waybar
 wget
 wikiman
