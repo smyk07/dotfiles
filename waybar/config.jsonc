@@ -29,8 +29,8 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": " {essid} -",
-    "format-ethernet": " {ipaddr} -",
+    "format-wifi": " wi-fi -",
+    "format-ethernet": " eth -",
     "format-disconnected": "", //An empty format will hide the module.
     "max-length": 75,
   },
